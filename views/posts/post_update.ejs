@@ -113,19 +113,15 @@
                     <form action="/posts/postupdate/<%=postupd._id%>" method="post">
                       <div class="form-group">
                         <label for="category">Category:</label>
-                        <!-- <select class="form-control" id="category" name="category_type">
+                        <select class="form-control" id="category" name="category_type">
+                          <option value="<%postupd._id%>"> <%=postupd.category_type%></option>
                           <option value="pagodas">Pagodas</option>
                           <option value="delecious food">foods</option>
                           <option value="beautiful places">places</option>
                           <option value="universities">universities</option>
                           <option value="donation schools">donation</option>
-                        </select> -->
-                        <select class="form-control input-border-bottom" id="category" name="category_type" required>
-
-                        <option value="<%postupd._id%>"> <%=postupd.category_type%></option>
-
-                    </select>
-                        <!-- <input type="text" class="form-control" id="title" name="title" aria-describedby="titleHelp" value="<%=postupd.title%>"> -->
+                        </select>
+                    
                       </div>
                       <div class="form-group">
                         <label for="title">Title:</label>
