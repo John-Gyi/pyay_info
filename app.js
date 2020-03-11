@@ -51,8 +51,8 @@ app.use('/posts',postRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
-// mongoose.connect('mongodb://127.0.0.1/info');
-mongoose.connect('mongodb+srv://JohnGyi:johngyi123@cluster0-juhmv.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect('mongodb://127.0.0.1/info');
+// mongoose.connect('mongodb+srv://JohnGyi:johngyi123@cluster0-juhmv.mongodb.net/test?retryWrites=true&w=majority');
 // mongoose.connect('mongodb+srv://johngyi:john123@nodejs007-qjc7j.mongodb.net/test?retryWrites=true&w=majority');
 var db=mongoose.connection;
 db.on('error',console.error.bind(console,'MongoDB connection error:'));

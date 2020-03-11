@@ -88,9 +88,12 @@ router.get('/category/:type',function(req,res,next){
   Post.find({category_type:req.params.type},function(err,rtn){
     if(err) throw err;
     console.log(rtn);
+    res.render('index',{cat:rtn});
+
   })
 
 })
+
 //@route POST routes/posts
 //@desc Add POST
 //@access Public
